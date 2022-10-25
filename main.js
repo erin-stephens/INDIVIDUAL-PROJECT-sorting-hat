@@ -91,7 +91,50 @@ expelBtn.addEventListener('click', (e) => {
   }
 });
 
+const filter = (array, houseType) => {
+  const houseArray = [];
+  for (const house of array) {
+    if (house.house === houseType) {
+      houseArray.push(house);
+    }
+  }
+  return houseArray;
+}
 
+const showAllBtn = document.querySelector("#allStudentsBtn");
+const showGryffindorBtn = document.querySelector("#gryffindorBtn");
+const showSlytherinBtn = document.querySelector("#slytherinBtn");
+const showHufflepuffBtn = document.querySelector("#hufflepuffBtn");
+const showRavenclawBtn = document.querySelector("#ravenclawBtn");
+
+showAllBtn.addEventListener('click', () => {
+  console.log("this button clicks");
+  cardsOnDom(students);
+}); 
+
+showGryffindorBtn.addEventListener('click', () => {
+  console.log("this button clicks");
+  const houseType = filter(students, 'Gryffindor');
+  cardsOnDom(houseType);
+});
+
+showSlytherinBtn.addEventListener('click', () => {
+  console.log("this button clicks");
+  const houseType = filter(students, 'Slytherin');
+  cardsOnDom(houseType);
+});
+
+showHufflepuffBtn.addEventListener('click', () => {
+  console.log("this button clicks");
+  const houseType = filter(students, 'Hufflepuff');
+  cardsOnDom(houseType);
+});
+
+showRavenclawBtn.addEventListener('click', () => {
+  console.log("this button clicks");
+  const houseType = filter(students, 'Ravenclaw');
+  cardsOnDom(houseType);
+});
 
 const startApp = () => {
   cardsOnDom(students);
