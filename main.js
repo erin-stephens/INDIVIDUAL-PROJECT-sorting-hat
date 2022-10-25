@@ -16,7 +16,7 @@ const sortStartBtn = document.querySelector("#sortStart");
 sortStartBtn.addEventListener('click', () => {
   console.log("this works");
   const form = document.querySelector("#form");
-  form.innerHTML += `<form>
+  form.innerHTML += `<form id="studentForm">
     <div class="mb-3">
       <label for="name" class="form-label">Name</label>
       <input type="text" class="form-control" id="studentName">
@@ -54,23 +54,44 @@ const createStudent = (e) => {
 
   students.push(newStudentObj);
   cardsOnDom(students);
-  // form.reset();   This line is not working
+  studentForm.reset();  
 };
 
 form.addEventListener('submit', createStudent);
+
+const cardsOnVol = (array) => {
+  let domString = "";
+  for (const removed of array) {
+    domString += `<div class="card" style="width: 18rem;" id="voldemortCard">
+    <img src="https://qph.cf2.quoracdn.net/main-qimg-5368047526091638b47abdb26002482e-lq" class="card-img-top" alt="Voldemort's Army">
+    <div class="card-body">
+      <h5 class="card-title">${removed.name}</h5>
+    </div>
+  </div>`;
+  }
+  renderToDom("#voldemortCard", domString);
+};
+
+const volStudent = [];
 
 const expelBtn = document.querySelector("#hogwartsCard");
 
 expelBtn.addEventListener('click', (e) => {
   console.log("this clicks")
 
+
   if (e.target.id.includes("expel")) {
     const [, id] = e.target.id.split("--");
     const index = students.findIndex(e => e.id === Number(id));
-    students.splice(index, 1); 
+    removed = students.splice(index, 1); 
+    console.log(removed);
+    volStudent.push(removed);
     cardsOnDom(students);
+    cardsOnVol(volStudent.flat());
   }
 });
+
+
 
 const startApp = () => {
   cardsOnDom(students);
