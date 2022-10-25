@@ -40,7 +40,7 @@ const cardsOnDom = (array) => {
   renderToDom("#hogwartsCard", domString);
 };
 
-//const formShow = document.querySelector("#form");
+
 const createStudent = (e) => {
   e.preventDefault();
   
@@ -83,11 +83,11 @@ expelBtn.addEventListener('click', (e) => {
   if (e.target.id.includes("expel")) {
     const [, id] = e.target.id.split("--");
     const index = students.findIndex(e => e.id === Number(id));
-    removed = students.splice(index, 1); 
+    const removed = students.splice(index, 1); 
     console.log(removed);
-    volStudent.push(removed);
+    volStudent.push(removed[0]);
     cardsOnDom(students);
-    cardsOnVol(volStudent.flat());
+    cardsOnVol(volStudent);
   }
 });
 
