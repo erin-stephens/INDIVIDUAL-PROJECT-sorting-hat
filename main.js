@@ -26,14 +26,14 @@ sortStartBtn.addEventListener('click', () => {
   </form>`
 }); 
 
-const cardsOnDom = (array) => {
-  let domString = "";
+ const cardsOnDom = (array) => {
+  let domString = ""; 
   for (const student of array) {
-    domString += `<div class="card" style="width: 18rem;" id="studentCard">
+    domString += `<div class="card ${student.house}" style="width: 18rem;" id="studentCard">
     <div class="card-body">
       <h5 class="card-title">${student.name}</h5>
       <p class="card-text">${student.house}</p>
-      <button class="btn btn-primary" id="expel--${student.id}">Expel</button>
+      <button class="btn btn-light" id="expel--${student.id}">Expel</button>
     </div>
   </div>`;
   }
@@ -53,9 +53,12 @@ const createStudent = (e) => {
   }
 
   students.push(newStudentObj);
+  console.log(students);
+  students.sort((a, b) => a.name.localeCompare(b.name));
   cardsOnDom(students);
   studentForm.reset();  
 };
+
 
 form.addEventListener('submit', createStudent);
 

@@ -1,3 +1,28 @@
 body {
   background-color: white;
 }
+#sortingHat, #cardTwo {
+  flex-direction: row;
+}
+#sortingHat img {
+  width: 40%;
+}
+#hogwartsCard, #voldemortCard {
+  display: flex;
+  flex-wrap: wrap;
+}
+.Slytherin {
+  background-color: olivedrab;
+  color: whitesmoke;
+}
+.Hufflepuff {
+  background-color: goldenrod;
+  color: whitesmoke;
+}
+.Ravenclaw {
+  background-color: darkblue;
+  color: whitesmoke;
+}.Gryffindor {
+  background-color: maroon;
+  color: whitesmoke;
+}
