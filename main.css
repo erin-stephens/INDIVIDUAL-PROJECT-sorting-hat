@@ -1,5 +1,6 @@
 body {
   background-color: white;
+  justify-content: center;
 }
 #sortingHat, #cardTwo {
   flex-direction: row;

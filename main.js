@@ -19,7 +19,7 @@ sortStartBtn.addEventListener('click', () => {
   form.innerHTML += `<form id="studentForm">
     <div class="mb-3">
       <label for="name" class="form-label">Name</label>
-      <input type="text" class="form-control" id="studentName">
+      <input type="text" class="form-control" id="studentName" required>
     </div>
     </div>
     <button type="submit" class="btn btn-primary" id="sortMe">Sort Me!</button>
