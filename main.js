@@ -23,7 +23,7 @@ sortStartBtn.addEventListener('click', () => {
     </div>
     </div>
     <button type="submit" class="btn btn-primary" id="sortMe">Sort Me!</button>
-  </form>`
+  </form>`;
 }); 
 
  const cardsOnDom = (array) => {

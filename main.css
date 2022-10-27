@@ -1,29 +1,73 @@
 body {
-  background-color: white;
+  background-color: black;
   justify-content: center;
+  font-family: 'Caveat', cursive;
 }
-#sortingHat, #cardTwo {
-  flex-direction: row;
+button {
+  font-size: 30px;
 }
-#sortingHat img {
-  width: 40%;
+#sortingHat {
+  margin: auto;
 }
 #hogwartsCard, #voldemortCard {
   display: flex;
   flex-wrap: wrap;
 }
-.Slytherin {
-  background-color: olivedrab;
-  color: whitesmoke;
+.Slytherin, #slytherinBtn {
+  background-color: darkgreen;
+  color: silver;
+  border-radius: 0px;
+  border-color: darkgreen;
+  font-size: 30px;
 }
-.Hufflepuff {
+#slytherinBtn:hover {
+  background-color: #224624;
+}
+.Hufflepuff, #hufflepuffBtn {
   background-color: goldenrod;
-  color: whitesmoke;
+  color: black;
+  border-radius: 0px;
+  border-color: goldenrod;
+  font-size: 30px;
 }
-.Ravenclaw {
-  background-color: darkblue;
-  color: whitesmoke;
-}.Gryffindor {
+#hufflepuffBtn:hover {
+  background-color: #f1c716;
+}
+.Ravenclaw, #ravenclawBtn {
+  background-color: navy;
+  color: goldenrod;
+  border-radius: 0px;
+  border-color: navy;
+  font-size: 30px;
+}
+#ravenclawBtn:hover {
+  background-color: #262a76;
+}
+.Gryffindor, #gryffindorBtn {
   background-color: maroon;
-  color: whitesmoke;
+  color: goldenrod;
+  border-radius: 0px;
+  border-color: maroon;
+  font-size: 30px;
+}
+#gryffindorBtn:hover {
+  background-color: #5C0001;
+}
+#allStudentsBtn {
+  border-radius: 0px;
+  font-size: 30px;
+}
+#filterBtn {
+  display: flex;
+  justify-content: center;
+}
+#form {
+  color: white;
+}
+h1 {
+  color: white;
+}
+#allStudentCards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
