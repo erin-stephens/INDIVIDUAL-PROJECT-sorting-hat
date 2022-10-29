@@ -3,11 +3,27 @@ body {
   justify-content: center;
   font-family: 'Caveat', cursive;
 }
+.hogwartsCrest{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-left: 15px;
+}
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
 button {
   font-size: 30px;
 }
 #sortingHat {
   margin: auto;
+  margin-bottom: 20px;
+  color: white;
+  background-color: black;
 }
 #hogwartsCard, #voldemortCard {
   display: flex;
@@ -60,6 +76,8 @@ button {
 #filterBtn {
   display: flex;
   justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 #form {
   color: white;
@@ -73,7 +91,7 @@ h1 {
   grid-template-columns: 1fr 1fr;
 }
 #sortMe, #sortStart, .card-text {
-  font-size: 25px;
+  font-size: 20px;
 }
 h2 {
   text-align: center;

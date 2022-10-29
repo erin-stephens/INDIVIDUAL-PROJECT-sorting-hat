@@ -18,12 +18,13 @@ sortStartBtn.addEventListener('click', () => {
   const form = document.querySelector("#form");
   form.innerHTML += `<form id="studentForm">
     <div class="mb-3">
-      <label for="name" class="form-label">Name</label>
-      <input type="text" class="form-control" id="studentName" required>
+      <label for="name" class="form-label"></label>
+      <input type="text" class="form-control" id="studentName" placeholder="Your Name" required>
     </div>
     </div>
     <button type="submit" class="btn btn-primary" id="sortMe">Sort Me!</button>
   </form>`;
+  sortStartBtn.remove("#sortingHat");
 }); 
 
  const cardsOnDom = (array) => {
@@ -43,11 +44,23 @@ sortStartBtn.addEventListener('click', () => {
 
 const createStudent = (e) => {
   e.preventDefault();
+ 
+  const createId = (array) => {
+    if (array.length) {
+      const idArray = [];
+      for (const el of array) {
+        idArray.push(el.id);
+      }
+      return Math.max(...idArray) + 1;
+    } else {
+      return 0;
+    }
+  }
   
   const houses = ["Gryffindor", "Hufflepuff", "Ravenclaw", "Slytherin"];
   
   const newStudentObj = {
-    id: students.length + 1,
+    id: createId(students),
     name: document.querySelector("#studentName").value,
     house: houses[Math.floor(Math.random() * houses.length)]
   }
