@@ -63,6 +63,7 @@ button {
 }
 #form {
   color: white;
+  font-size: 30px;
 }
 h1 {
   color: white;
@@ -70,4 +71,10 @@ h1 {
 #allStudentCards {
   display: grid;
   grid-template-columns: 1fr 1fr;
+}
+#sortMe, #sortStart, .card-text {
+  font-size: 25px;
+}
+h2 {
+  text-align: center;
 }
