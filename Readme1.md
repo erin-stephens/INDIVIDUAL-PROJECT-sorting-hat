@@ -37,7 +37,8 @@ const createStudent = (e) => {
 PLACE CODE SNIPPET HERE
 
 ## Project Screenshots <!-- These can be inside of your project. Look at the repos from class and see how the images are included in the readme -->
-<img width="1148" alt="Your Alt" src="your-link.png">
+<img width="1148" alt="screenshot of sorting" src="images/Screen Shot 2022-10-28 at 9.08.45 PM.png">
+<img width="1148" alt="sorted cards" src="images/Screen Shot 2022-10-28 at 9.09.21 PM.png">
 
 ## Contributors
-- [YOUR NAME](https://github.com/your-github-url)
+- Erin Stephens (https://github.com/erin-stephens)
