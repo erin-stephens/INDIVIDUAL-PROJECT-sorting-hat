@@ -6,16 +6,7 @@ I have created an app that will sort you and your friends into your Hogwarts hou
 [View App](https://stephens-sortinghat.netlify.app/)
 
 ## Get Started <!-- OPTIONAL, but doesn't hurt -->
-const createStudent = (e) => {
-  e.preventDefault();
-  
-  const houses = ["Gryffindor", "Hufflepuff", "Ravenclaw", "Slytherin"];
-  
-  const newStudentObj = {
-    id: students.length + 1,
-    name: document.querySelector("#studentName").value,
-    house: houses[Math.floor(Math.random() * houses.length)]
-  }
+
 
 ## About the User <!-- This is a scaled down user persona -->
  - The ideal user for this application is a Potterhead. 
@@ -34,7 +25,16 @@ const createStudent = (e) => {
 - [Google Slides Planner](#https://docs.google.com/presentation/d/1ruwTlWLLmZFmCzm6r2bA0mFT_iTkWXhg_RGopDgENcM/edit?usp=sharing)
 
 ## Code Snippet <!-- OPTIONAL, but doesn't hurt -->
-PLACE CODE SNIPPET HERE
+const createStudent = (e) => {
+  e.preventDefault();
+  
+  const houses = ["Gryffindor", "Hufflepuff", "Ravenclaw", "Slytherin"];
+  
+  const newStudentObj = {
+    id: students.length + 1,
+    name: document.querySelector("#studentName").value,
+    house: houses[Math.floor(Math.random() * houses.length)]
+  }
 
 ## Project Screenshots <!-- These can be inside of your project. Look at the repos from class and see how the images are included in the readme -->
 <img width="1148" alt="screenshot of sorting" src="images/Screen Shot 2022-10-28 at 9.08.45 PM.png">
