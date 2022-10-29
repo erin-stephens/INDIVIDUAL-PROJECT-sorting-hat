@@ -3,7 +3,8 @@ const students = [
   {
     id: 1,
     name: "Harry Potter",
-    house: "Gryffindor"
+    house: "Gryffindor",
+    crest: ""
   }
 ];
 
@@ -30,7 +31,7 @@ sortStartBtn.addEventListener('click', () => {
  const cardsOnDom = (array) => {
   let domString = ""; 
   for (const student of array) {
-    domString += `<div class="card ${student.house}" style="width: 18rem;" id="studentCard">
+    domString += `<div class="card ${student.house}" style="width: 12rem;" id="studentCard">
     <div class="card-body">
       <h5 class="card-title">${student.name}</h5>
       <p class="card-text">${student.house}</p>
@@ -78,7 +79,7 @@ form.addEventListener('submit', createStudent);
 const cardsOnVol = (array) => {
   let domString = "";
   for (const removed of array) {
-    domString += `<div class="card" style="width: 18rem;" id="voldemortCard">
+    domString += `<div class="card" style="width: 12rem;" id="voldemortCard">
     <img src="https://qph.cf2.quoracdn.net/main-qimg-5368047526091638b47abdb26002482e-lq" class="card-img-top" alt="Voldemort's Army">
     <div class="card-body">
       <h5 class="card-title">${removed.name}</h5>

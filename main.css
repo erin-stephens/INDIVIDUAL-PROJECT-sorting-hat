@@ -24,6 +24,7 @@ button {
   margin-bottom: 20px;
   color: white;
   background-color: black;
+  width: 50%;
 }
 #hogwartsCard, #voldemortCard {
   display: flex;
